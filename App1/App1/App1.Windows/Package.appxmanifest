@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="12492Shabb.HandmadeManager" Publisher="CN=1D20A9B0-2BF9-4CE8-B565-6EE9EA26138B" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>Handmade Manager</DisplayName>
+    <PublisherDisplayName>Joseph Montanez</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="App1.Windows.App">
+      <m2:VisualElements DisplayName="App1.Windows" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="App1.Windows" ForegroundText="light" BackgroundColor="#464646">
+        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+        <m2:InitialRotationPreference>
+          <m2:Rotation Preference="landscape" />
+        </m2:InitialRotationPreference>
+      </m2:VisualElements>
+      <ApplicationContentUriRules>
+        <Rule Match="https://*.facebook.com" Type="include" />
+        <Rule Match="https://www.facebook.com/dialog/oauth" Type="include" />
+        <Rule Match="https://www.facebook.com/connect/login_success.html" Type="include" />
+        <Rule Match="https://openapi.etsy.com" Type="include" />
+      </ApplicationContentUriRules>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

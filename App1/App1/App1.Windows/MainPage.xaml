@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Content="Button" HorizontalAlignment="Left" Margin="669,385,0,0" VerticalAlignment="Top" Click="check_Click_1"/>
+
+        <HyperlinkButton x:Name="oAuthAuthorizeLink" HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="Authorize URL" Foreground="Blue"
+                                 Click="oAuthAuthorizeLink_Click_1" FontSize="14"/>
+        <TextBox x:Name="LinkedInResponse" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" IsReadOnly="True" TextWrapping="Wrap"/>
+        <WebView x:Name="WebViewHost" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed"/>
+    </Grid>
+
+</Page>
